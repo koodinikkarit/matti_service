@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+message ConnectMatrixParameter {
+	string slug = 1;
+	string ip = 2;
+	uint32 port = 3;
+	uint32 conPortAmount = 4;
+	uint32 cpuPortAmount = 5;
+}

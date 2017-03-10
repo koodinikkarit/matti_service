@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message CreateDefaultStateParameter {
+	string slug = 1;
+	uint32 matrixId = 2;
+}
