@@ -1,5 +1,5 @@
 syntax = "proto3";
 
-message RemoveDiagram {
+message FetchDiagramScreenById{
 	uint32 id = 1;
 }

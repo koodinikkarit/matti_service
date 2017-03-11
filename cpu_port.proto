@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-message ConPort {
+message CpuPort {
 	uint32 id = 1;
 	string slug = 2;
 	uint32 matrix = 3;

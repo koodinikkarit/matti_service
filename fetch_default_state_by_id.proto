@@ -1,5 +1,5 @@
 syntax = "proto3";
 
-message RemoveDiagram {
+message FetchDefaultStateById {
 	uint32 id = 1;
 }
