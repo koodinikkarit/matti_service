@@ -19,6 +19,8 @@ import "diagram_screen_cpu_port.proto";
 import "fetch_matrixs_parameter.proto";
 import "fetch_matrix_by_id.proto";
 import "fetch_matrix_by_slug.proto";
+import "fetch_con_ports_by_matrix_id.proto";
+import "fetch_cpu_ports_by_matrix_id.proto";
 import "fetch_default_states.proto";
 import "connect_matrix.proto";
 import "matrix_connected.proto";
@@ -26,7 +28,9 @@ import "edit_matrix_parameter.proto";
 import "matrix_removed.proto";
 import "remove_matrix.proto";
 import "edit_con_port_parameter.proto";
+import "con_port_edited.proto";
 import "edit_cpu_port_parameter.proto";
+import "cpu_port_edited.proto";
 import "fetch_default_state_by_id.proto";
 import "fetch_default_state_by_slug.proto";
 import "create_default_state.proto";
@@ -79,13 +83,15 @@ service Matti {
 	rpc fetchMatrixs(FetchMatrixsParameter) returns (stream Matrix) {}
 	rpc fetchMatrixById(FetchMatrixById) returns (Matrix) {}
 	rpc fetchMatrixBySlug(FetchMatrixBySlug) returns (Matrix) {}
+	rpc fetchConPortsByMatrixId(FetchConPortsByMatrixId) returns (stream ConPort) {}
+	rpc fetchCpuPortsByMatrixId(FetchCpuPortsByMatrixId) returns (stream CpuPort) {}
 
 	// Matrix mutations
 	rpc connectMatrix(ConnectMatrix) returns(MatrixConnected) {}
 	rpc editMatrix(EditMatrixParameter) returns(Matrix) {}
 	rpc removeMatrix(RemoveMatrix) returns(MatrixRemoved) {}
-	rpc editConPort(EditConPortParameter) returns(ConPort) {}
-	rpc editCpuPort(EditCpuPortParameter) returns(CpuPort) {}
+	rpc editConPort(EditConPortParameter) returns(ConPortEdited) {}
+	rpc editCpuPort(EditCpuPortParameter) returns(CpuPortEdited) {}
 	
 	// Defaulstate queries
 	rpc fetchDefaultStates(FetchDefaultStates) returns (stream DefaultState) {}

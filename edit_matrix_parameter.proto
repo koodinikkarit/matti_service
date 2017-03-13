@@ -5,6 +5,4 @@ message EditMatrixParameter {
 	string slug = 2;
 	string ip = 3;
 	uint32 port = 4;
-	uint32 conPortAmount = 5;
-	uint32 cpuPortAmount = 6;
 }
