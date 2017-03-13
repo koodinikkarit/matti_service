@@ -21,6 +21,7 @@ import "fetch_matrix_by_id.proto";
 import "fetch_matrix_by_slug.proto";
 import "fetch_default_states.proto";
 import "connect_matrix.proto";
+import "matrix_connected.proto";
 import "edit_matrix_parameter.proto";
 import "matrix_removed.proto";
 import "remove_matrix.proto";
@@ -80,7 +81,7 @@ service Matti {
 	rpc fetchMatrixBySlug(FetchMatrixBySlug) returns (Matrix) {}
 
 	// Matrix mutations
-	rpc connectMatrix(ConnectMatrix) returns(Matrix) {}
+	rpc connectMatrix(ConnectMatrix) returns(MatrixConnected) {}
 	rpc editMatrix(EditMatrixParameter) returns(Matrix) {}
 	rpc removeMatrix(RemoveMatrix) returns(MatrixRemoved) {}
 	rpc editConPort(EditConPortParameter) returns(ConPort) {}
