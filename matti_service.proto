@@ -80,7 +80,7 @@ service Matti {
 	rpc fetchMatrixBySlug(FetchMatrixBySlug) returns (Matrix) {}
 
 	// Matrix mutations
-	rpc connectMarix(ConnectMatrix) returns(Matrix) {}
+	rpc connectMatrix(ConnectMatrix) returns(Matrix) {}
 	rpc editMatrix(EditMatrixParameter) returns(Matrix) {}
 	rpc removeMatrix(RemoveMatrix) returns(MatrixRemoved) {}
 	rpc editConPort(EditConPortParameter) returns(ConPort) {}
